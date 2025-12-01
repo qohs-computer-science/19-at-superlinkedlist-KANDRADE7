@@ -10,6 +10,9 @@ public class SuperTestFile {
     System.out.println("\n"+tester.toString()); 
     tester.removeVowels();
     System.out.println(tester.toString()); 
+    tester.removeConsonants();
+    System.out.println(tester.toString()); 
+
 
   } // end main
 } // end class

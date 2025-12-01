@@ -8,7 +8,8 @@ public class SuperLinkedList extends LinkedList<String> {
         Iterator <String> jumper = this.iterator();
         boolean tracker = false; 
         while (jumper.hasNext()){
-            if("aeiou".indexOf(jumper.next()) != -1){
+            String val = jumper.next().toLowerCase();
+            if("aeiou".indexOf(val) != -1){
                 jumper.remove();
                 tracker=true;
             }//end if
@@ -21,12 +22,14 @@ public class SuperLinkedList extends LinkedList<String> {
         boolean carrot = false;
         String consonants = "bcdfghjklmnpqrstvwxyz";
         while(bunny.hasNext()){
-            if(consonants.indexOf(bunny.next()) != -1)
+            String easterEgg = bunny.next().toLowerCase();
+            if(consonants.indexOf(easterEgg) != -1){
                 bunny.remove();
                 carrot=true;
+            }//end if
         }//end while loop
         return carrot;
-    }
+    }//end func
 
     public LinkedList<String> removeDuplicates() {
         return null;
