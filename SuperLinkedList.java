@@ -1,10 +1,19 @@
+//Katherine Andrade, 12/1/25, period 6 cp3
 import java.util.LinkedList;
 import java.util.Iterator;
 
 public class SuperLinkedList extends LinkedList<String> {
+
     public boolean removeVowels() {
-        return false;
-    }
+        LinkedList <String> log = new LinkedList<String>();
+        Iterator <String> jumper = log.iterator();
+        boolean tracker = false; 
+        while ("aeiou".indexOf(jumper.next()) != -1){
+            jumper.remove();
+            tracker=true;
+        }//end while
+    return tracker;
+    }//end func
 
     public boolean removeConsonants() {
         return false;
@@ -25,7 +34,13 @@ public class SuperLinkedList extends LinkedList<String> {
     }
 
     public String toString() {
-
-        return "";
-    }
+        String finished = "";
+        LinkedList <String> list = new LinkedList<String>();
+        Iterator <String> jumper = list.iterator();
+        while(jumper.hasNext()){
+            String val = jumper.next();
+            finished += finished + val + ", ";
+        }//end while
+        return finished;
+    }//end toString
 } // end SuperLinkedList
