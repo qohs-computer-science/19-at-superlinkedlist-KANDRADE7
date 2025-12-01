@@ -5,18 +5,27 @@ import java.util.Iterator;
 public class SuperLinkedList extends LinkedList<String> {
 
     public boolean removeVowels() {
-        
         Iterator <String> jumper = this.iterator();
         boolean tracker = false; 
-        while ("aeiou".indexOf(jumper.next()) != -1){
-            jumper.remove();
-            tracker=true;
+        while (jumper.hasNext()){
+            if("aeiou".indexOf(jumper.next()) != -1){
+                jumper.remove();
+                tracker=true;
+            }//end if
         }//end while
     return tracker;
     }//end func
 
     public boolean removeConsonants() {
-        return false;
+        Iterator <String> bunny = this.iterator();
+        boolean carrot = false;
+        String consonants = "bcdfghjklmnpqrstvwxyz";
+        while(bunny.hasNext()){
+            if(consonants.indexOf(bunny.next()) != -1)
+                bunny.remove();
+                carrot=true;
+        }//end while loop
+        return carrot;
     }
 
     public LinkedList<String> removeDuplicates() {
@@ -35,11 +44,12 @@ public class SuperLinkedList extends LinkedList<String> {
 
     public String toString() {
         String finished = "";
-        LinkedList <String> list = new LinkedList<String>();
-        Iterator <String> jumper = list.iterator();
+        Iterator <String> jumper = this.iterator();
         while(jumper.hasNext()){
             String val = jumper.next();
-            finished += finished + val + ", ";
+            finished += val; 
+            if(jumper.hasNext())
+                finished+=", ";
         }//end while
         return finished;
     }//end toString
