@@ -5,8 +5,8 @@ import java.util.Iterator;
 public class SuperLinkedList extends LinkedList<String> {
 
     public boolean removeVowels() {
-        LinkedList <String> log = new LinkedList<String>();
-        Iterator <String> jumper = log.iterator();
+        
+        Iterator <String> jumper = this.iterator();
         boolean tracker = false; 
         while ("aeiou".indexOf(jumper.next()) != -1){
             jumper.remove();
