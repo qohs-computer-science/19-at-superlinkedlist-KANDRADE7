@@ -4,15 +4,14 @@ public class SuperTestFile {
 
     SuperLinkedList tester = new SuperLinkedList(); 
     tester.add("a");
+    tester.add("a");
     tester.addFirst("A");
     tester.add("x");  
     tester.add("e");
+    tester.add("e");
     System.out.println("\n"+tester.toString()); 
-    tester.removeVowels();
-    System.out.println(tester.toString()); 
-    tester.removeConsonants();
-    System.out.println(tester.toString()); 
-
-
+    tester.removeDuplicates();
+    System.out.println("\n"+tester.toString()); 
+   
   } // end main
 } // end class
