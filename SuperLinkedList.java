@@ -65,9 +65,15 @@ public class SuperLinkedList extends LinkedList<String> {
     }//end func
 
     public LinkedList<String> mix(LinkedList<String> list2) {
-
-        return null;
-    }
+        LinkedList <String> blended = new LinkedList<String>();
+        Iterator <String> iterOne = this.iterator();
+        Iterator <String> iterTwo = list2.iterator();
+        while(iterOne.hasNext()){
+            blended.add(iterOne.next());
+            blended.add(iterTwo.next());
+        }//end while loop
+        return blended;
+    }// end func
 
     public String toString() {
         String finished = "";
