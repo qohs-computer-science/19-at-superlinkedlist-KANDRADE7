@@ -32,18 +32,26 @@ public class SuperLinkedList extends LinkedList<String> {
     }//end func
 
     public LinkedList<String> removeDuplicates() {
+        LinkedList <String> removeVals = new LinkedList<String>();
         Iterator <String> cookie = this.iterator();
-        String sugar = cookie.next(); 
+        int index=0;
+
         while(cookie.hasNext()){
-            String candle = cookie.next();
-            if(sugar.equals(candle)){
-                cookie.remove();  
-            }//end if
-            else
-                sugar=candle; 
+            String sugar = cookie.next();
+            boolean removed =false;
+            for(int x=0; x< index; x++){
+                if(this.get(x).equals(sugar)){
+                removeVals.add(sugar);
+                cookie.remove();
+                removed = true;
+                }//end if
+            }//end for loop
+            if(!removed)
+                index++;
         }//end while loop
-        return this;
-    }//end func
+        
+        return removeVals;
+    } //end func
 
     public LinkedList<String> concatenateStrings() {
 
