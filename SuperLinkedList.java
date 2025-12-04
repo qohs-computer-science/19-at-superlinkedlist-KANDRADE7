@@ -49,14 +49,20 @@ public class SuperLinkedList extends LinkedList<String> {
             if(!removed)
                 index++;
         }//end while loop
-        
+
         return removeVals;
     } //end func
 
     public LinkedList<String> concatenateStrings() {
-
-        return null;
-    }
+        LinkedList<String> snowballList = new LinkedList<String>();
+        Iterator <String> hopper = this.iterator();
+        String snowBall = "";
+        while(hopper.hasNext()){
+            snowBall = snowBall + hopper.next();
+            snowballList.add(snowBall);
+        }//end while loop
+        return snowballList;
+    }//end func
 
     public LinkedList<String> mix(LinkedList<String> list2) {
 

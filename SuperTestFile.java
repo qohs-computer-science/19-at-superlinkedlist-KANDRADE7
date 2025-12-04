@@ -4,21 +4,10 @@ public class SuperTestFile {
 
     SuperLinkedList tester = new SuperLinkedList(); 
     tester.add("a");
-    System.out.println("\n"+tester.toString()); 
-    tester.removeVowels();
-    System.out.println("\n"+tester.toString()); 
-    tester.add("a");
-    tester.addFirst("A");
-    tester.add("x");  
-    tester.add("e");
-    tester.add("e");
-    tester.add("a");
-    tester.addFirst("E");
-    System.out.println("\n"+tester.toString()); 
-    System.out.println("n"+tester.removeDuplicates());
-    System.out.println("\n"+tester.toString()); 
-    tester.removeVowels();
-    System.out.println("\n"+tester.toString()); 
+    tester.add("b");
+    tester.add("c");
+    System.out.println("\n"+tester.concatenateStrings()); 
+
    
   } // end main
 } // end class
